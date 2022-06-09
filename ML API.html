@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://breast-cancer-detection-app.herokuapp.com/predict -->
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #181a1b;
+}
+html, body {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+  
+  <title>ML API</title>
+
+  <style>
+    /* CSS code for button */
+    body {
+      background-image: url('static/images/world.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<meta name="darkreader" content="2fcf69846e452dde6895e2270364abab"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1 {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}
+embed[type="application/pdf"][src="about:blank"] { filter: invert(100%) contrast(90%); }</style></head>
+
+<body>
+
+  <!-- Show Indian AI Hospital banner-->
+  <div>
+    <img src="./ML API_files/Indian AI Hospital.png" class="w3-border w3-padding" alt="Indian AI Hospital" style="width:100%">
+  </div>
+ 
+ 
+ <div class="login">
+	
+    <!-- Get input for predict the cancer -->
+    <center>
+    <form action="http://breast-cancer-detection-app.herokuapp.com/predict" method="post">
+        <h1>Enter the value of tumor features &gt;&gt;&gt;</h1>
+        
+    	<input type="text" name="mean_radius" placeholder="mean radius" required="required">
+        <input type="text" name="mean_texture" placeholder="mean texture" required="required">
+		<input type="text" name="mean_perimeter" placeholder="mean perimeter" required="required">
+		<input type="text" name="mean_area" placeholder="mean area" required="required">
+        <input type="text" name="mean_smoothness" placeholder="mean smoothness" required="required">
+		<input type="text" name="mean_compactness" placeholder="mean compactness" required="required">
+		<br>
+    	<input type="text" name="mean_concavity" placeholder="mean concavity" required="required">
+        <input type="text" name="mean_concave_points" placeholder="mean concave points" required="required">
+		<input type="text" name="mean_symmetry" placeholder="mean symmetry" required="required">
+    	<input type="text" name="mean_fractal_dimension" placeholder="mean fractal dimension" required="required">
+        <input type="text" name="radius_error" placeholder="radius error" required="required">
+		<input type="text" name="texture_error" placeholder="texture error" required="required">
+		<br>
+    	<input type="text" name="perimeter_error" placeholder="perimeter error" required="required">
+        <input type="text" name="area_error" placeholder="area error " required="required">
+		<input type="text" name="smoothness_error" placeholder="smoothness error" required="required">
+    	<input type="text" name="compactness_error" placeholder="compactness error" required="required">
+        <input type="text" name="concavity_error" placeholder="concavity error" required="required">
+		<input type="text" name="concave_points_error" placeholder="concave points error" required="required">
+    	<br>
+    	<input type="text" name="symmetry_error" placeholder="symmetry error" required="required">
+        <input type="text" name="fractal_dimension_error" placeholder="fractal dimension error" required="required">
+		<input type="text" name="worst_radius" placeholder="worst radius" required="required">
+    	<input type="text" name="worst_texture" placeholder="worst texture" required="required">
+        <input type="text" name="worst_perimeter" placeholder="worst perimeter" required="required">
+		<input type="text" name="worst_area" placeholder="worst area" required="required">
+		<br>
+    	<input type="text" name="worst_smoothness" placeholder="worst smoothness" required="required">
+        <input type="text" name="worst_compactness" placeholder="worst compactness" required="required">
+		<input type="text" name="worst_concavity" placeholder="worst concavity" required="required">
+    	<input type="text" name="worst_concave_points" placeholder="worst concave points" required="required">
+        <input type="text" name="worst_symmetry" placeholder="&#39;worst symmetry" required="required">
+		<input type="text" name="worst_fractal_dimension" placeholder="worst fractal dimension" required="required">
+        <br>
+        <br>
+        
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Cancer</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>Patient has ** breast cancer **</h1>
+       </center>
+   </div>
+
+ </div>
+
+
+</body></html>
